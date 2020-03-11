@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', 'IndexController@index')->name('index');
+
+Route::get('/products/data', 'ProductController@data')->name('products.data');
+Route::get('/products/{product}/delete', 'ProductController@delete')->name('products.delete');
+Route::resource('products', 'ProductController');
